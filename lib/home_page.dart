@@ -8,9 +8,6 @@ import 'package:flutter_application_1/controller/auth.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/util/my_button.dart';
 import 'package:flutter_application_1/util/result_message.dart';
-import 'package:flutter_application_1/welcome-page.dart';
-
-int score = 0;
 
 class HomePage extends StatefulWidget {
   final int level;
@@ -24,6 +21,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final AuthController authController = AuthController();
 
+  int score = 0;
   int numberA = 0;
   int numberB = 0;
   String userAnswer = '';
