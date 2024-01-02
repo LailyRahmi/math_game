@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "170642391764",
+    "project_id": "mathsum-quest",
+    "storage_bucket": "mathsum-quest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:170642391764:android:c2bd63467d175a338eb141",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDALt55UJpKch-qJSdjePghJ7l3L9N5CVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
