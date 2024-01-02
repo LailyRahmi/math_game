@@ -449,12 +449,20 @@ class _HomePageState extends State<HomePage> {
           ),
 
           // Display the score
-          Text(
-            'Score: $score',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Colors.indigo,
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 8.0, horizontal: 16.0),
+            margin: EdgeInsets.only(bottom: 8),
+            decoration: BoxDecoration(
+              color: Colors.indigo[200],
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            child: Text(
+              'Score: $score',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
