@@ -5,8 +5,10 @@ import 'package:flame_audio/flame_audio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/const.dart';
 import 'package:flutter_application_1/controller/auth.dart';
+import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/util/my_button.dart';
 import 'package:flutter_application_1/util/result_message.dart';
+import 'package:flutter_application_1/welcome-page.dart';
 
 int score = 0;
 
@@ -367,24 +369,36 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.indigo[100],
-      body: Column(
-        children: [
-          Container(
-            height: 100,
-            color: Colors.indigo[300],
-            child: const Center(
-              child: Padding(
-                padding: EdgeInsets.only(top: 30),
-                child: Text(
-                  'MathSum Quest',
-                  style: TextStyle(
-                      fontSize: 22,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white70),
-                ),
-              ),
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            'MathSum Quest',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.w500,
+              color: Colors.white,
             ),
           ),
+        ),
+        backgroundColor: Colors.indigo[300],
+        actions: [
+          IconButton(
+            onPressed: () {
+              authController.logoutUser();
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => GameStart()),
+              );
+            },
+            icon: Icon(
+              Icons.logout,
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
+      body: Column(
+        children: [
           Expanded(
             child: Container(
               child: Center(
